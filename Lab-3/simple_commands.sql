@@ -71,5 +71,9 @@ SELECT * FROM teacher WHERE SUBJECT IN ('Computer Science', 'Physics');
 SELECT * FROM teacher WHERE salary IS NULL;
 -- ORDER BY
 SELECT * FROM teacher ORDER BY salary DESC;
- 
-
+-- LIKE
+SELECT subject FROM teacher WHERE name LIKE '%cox'; -- % at start, means start does not matter, end must match!
+SELECT subject FROM teacher WHERE name LIKE 'Sofia%'; -- % at end, means start matters, end does not matter!
+SELECT * FROM teacher WHERE name LIKE '%HOW%'; -- we dont know, it's the first or the last, it will fetch only entries whre HOW is available
+SELECT * FROM teacher WHERE name LIKE '%o_'; -- fetching the name, where second last character is o
+SELECT * FROM teacher WHERE name LIKE 'L_vi_C_%'; --  end doesnot matter, and also using wildCard
