@@ -16,9 +16,11 @@ SELECT sum(salary) AS total_salary FROM teachers;
 SELECT avg(salary) AS avearge_salary FROM teachers;
 
 -- Group By
-SELECT department, count(id)
+SELECT department
 FROM teachers
-GROUP BY department;
+GROUP BY department
+HAVING count(id) > 3
+;
 
 SELECT department, AVG(salary)
 FROM teachers
