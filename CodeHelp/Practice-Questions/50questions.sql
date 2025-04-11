@@ -160,7 +160,6 @@ WHERE 4 = (
     WHERE w2.salary > w1.salary
 );
 
-
 -- Q-35. Write an SQL query to fetch the list of employees with the same salary.
 SELECT A.first_name, B.first_name
 FROM Worker A, Worker B
