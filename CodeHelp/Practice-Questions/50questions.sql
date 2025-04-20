@@ -189,7 +189,12 @@ WHERE WORKER_ID =2;
  WHERE B.WORKER_REF_ID IS NULL;
 
 -- Q-39. Write an SQL query to fetch the first 50% records from a table.
-
+SELECT *
+FROM WORKER
+WHERE WORKER_ID <= (
+	SELECT COUNT(WORKER_ID)/2
+    FROM WORKER
+);
 
 -- Q-40. Write an SQL query to fetch the departments that have less than 4 people in it.
 SELECT Department, COUNT(*) as total_number_of_employee
@@ -203,14 +208,23 @@ FROM WORKER
 GROUP BY Department;
 
 -- Q-42. Write an SQL query to show the last record from a table.
+SELECT * FROM WORKER
+ORDER BY WORKER_ID DESC
+LIMIT 1;
 
 -- Q-43. Write an SQL query to fetch the first row of a table.
 SELECT * FROM WORKER
 LIMIT 1;
 
 -- Q-44. Write an SQL query to fetch the last five records from a table.
+SELECT * FROM WORKER
+ORDER BY WORKER_ID DESC
+LIMIT 5;
 
 -- Q-45. Write an SQL query to print the name of employees having the highest salary in each department.
+SELECT Department, COUNT(*) as total_number_of_employee
+FROM WORKER
+GROUP BY Department;
 
 -- Q-46. Write an SQL query to fetch three max salaries from a table using a co-related subquery.
 
