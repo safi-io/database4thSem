@@ -222,11 +222,10 @@ ORDER BY WORKER_ID DESC
 LIMIT 5;
 
 -- Q-45. Write an SQL query to print the name of employees having the highest salary in each department.
-SELECT Department, COUNT(*) as total_number_of_employee
-FROM WORKER
-GROUP BY Department;
+
 
 -- Q-46. Write an SQL query to fetch three max salaries from a table using a co-related subquery.
+
 
 -- Q-47. Write an SQL query to fetch three min salaries from a table using a co-related subquery.
 
