@@ -222,10 +222,16 @@ ORDER BY WORKER_ID DESC
 LIMIT 5;
 
 -- Q-45. Write an SQL query to print the name of employees having the highest salary in each department.
-
+SELECT W.DEPARTMENT, W.FIRST_NAME, W.SALARY FROM
+(SELECT MAX(SALARY) AS maxSalary, DEPARTMENT
+FROM WORKER
+GROUP BY DEPARTMENT) temp
+INNER JOIN 
+WORKER AS W
+ON TEMP.DEPARTMENT = W.DEPARTMENT AND TEMP.maxSalary = W.SALARY;
+;
 
 -- Q-46. Write an SQL query to fetch three max salaries from a table using a co-related subquery.
-
 
 -- Q-47. Write an SQL query to fetch three min salaries from a table using a co-related subquery.
 
