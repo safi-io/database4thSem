@@ -1,2 +1,2 @@
-# Database 4th Semester
-This repository is created for my 4th Semester Database Subject.
+# Database Systems
+This repository is created to ace SQL queries.
